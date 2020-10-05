@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PokeChallenger</string>
+    <string name="button_text">FETCH</string>
 </resources>

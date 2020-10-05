@@ -12,6 +12,9 @@ class PokemonRemoteDataSourceImpl(
 ) : PokemonDataSource {
 
     override fun getPokemonsData() =
-        service.getAllPokemons().map { pokemonMapper.map(it) }.subscribeOn(Schedulers.io())
+        service.getAllPokemons()
+            .map { it.values.toList() }
+            .map { pokemonMapper.map(it) }
+            .subscribeOn(Schedulers.io())
 
 }
