@@ -9,5 +9,5 @@ interface PoGoServiceAPI {
 
     //all pokemons
     @GET("api/v1/pokemon_names.json")
-    fun getAllPokemons(): Single<List<PokemonAPI>>
+    fun getAllPokemons(): Single<Map<String, PokemonAPI>>
 }
